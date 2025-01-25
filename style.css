@@ -6,17 +6,17 @@ body {
 .content-wrapper label {
   font-weight: 300;
   font-size: 24px;
-  text-align: left;
+  text-align: center;
   color:rgb(105, 104, 104);
 }
 
-label p {
+/* label p {
   padding-left: 30px;
-}
+} */
 
-.content-wrapper p{
+/* .content-wrapper p{
   text-align: left;
-}
+} */
 
 .anot {
   font-size: 10px;
@@ -42,8 +42,13 @@ label p {
   width: 300px;
 }
 
+span {
+  font-size: 30px;
+}
+
 input {
-  width: 150px;
+  width: 200px;
+  height: 40px;
   padding: 10px;
   padding-right: 20px;
   font-size: 30px;
@@ -51,21 +56,30 @@ input {
   border: none;
   border-bottom: 2px solid #d7d3d3;
   background-color: aliceblue;
-  color:rgb(105, 104, 104)
+  color: #000;
+}
+
+#rate {
+  color: rgb(53, 127, 151);
 }
 
 .result {
   display:inline-block;
-  width: 150px;
+  width: 200px;
+  height:40px;
   padding: 10px;
   padding-right: 20px;
   font-size: 30px;
   text-align: right;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .unit {
   display: inline-block;
   color: #000;
   margin-left: 20px;
+}
+
+#error-msg {
+  color: red;
 }

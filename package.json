@@ -1,0 +1,20 @@
+{
+  "name": "14_exchange",
+  "version": "1.0.0",
+  "description": "exchange app from KRW to JPY",
+  "homepage": "https://github.com/karuchip/exchange#readme",
+  "bugs": {
+    "url": "https://github.com/karuchip/exchange/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karuchip/exchange.git"
+  },
+  "license": "ISC",
+  "author": "Hikaru",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

@@ -3,11 +3,14 @@ const krw = document.getElementById("krw");
 
 //input項目に入力があった場合にイベントリスナーが発動
 krw.addEventListener("change", ()=> {
+  //入力値を取得
   const amount = document.getElementById("krw").value;
+  //画面表示領域を取得
   const resultDiv = document.getElementById("result");
   const rateDiv = document.getElementById("rate");
   const errorDiv = document.getElementById('error-msg');
 
+  //画面上のエラーメッセージを削除
   errorDiv.innerHTML = ``;
 
   //バリデーションチェック
@@ -27,7 +30,7 @@ krw.addEventListener("change", ()=> {
                       `;
 
         rateDiv.innerHTML =`
-                      * 換算レート　　　：${conversion_rate}
+                      * 換算レート：${conversion_rate}
                       `;
 
       })
@@ -39,6 +42,7 @@ krw.addEventListener("change", ()=> {
   }
 });
 
+//api連携
 async function getExchanges(amount) {
  const url = `https://v6.exchangerate-api.com/v6/${myApi}/pair/KRW/JPY/${amount}`;
  const response = await fetch(url);
@@ -46,6 +50,7 @@ async function getExchanges(amount) {
     return await response.json();
 }
 
+//バリデーションチェック
 function validation(amount) {
   if(isNaN(amount)) {
     return {isValid: false, message: '⚠️ 半角数字を入力してください。'};
